@@ -18,10 +18,8 @@ public class WeatherController {
             @RequestParam(name = "lat") double latitude
     ) {
         return new WeatherApiResponse(LocalDateTime.now(),
-                "Вызов мс "
-                        .concat(String.valueOf(latitude))
-                        .concat(" ")
-                        .concat(String.valueOf(longitude)));
+                "Получен ответ от ms feign_client_weather_external. Сумма - "
+                        .concat(String.valueOf(longitude + latitude)));
     }
 
 }
